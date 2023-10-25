@@ -1,23 +1,16 @@
 import "./App.css"
+import Message from "./Message"
 
 export default () => {
   return <>
     <main>
-      <div className="message">
-        <div className="user">Dunha, aquele!</div>
-        <div className="text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto dolores, molestiae consequuntur nulla similique et itaque saepe ab enim nemo quae modi rerum sapiente quasi voluptatum assumenda aliquid voluptatem placeat.
-        </div>
-      </div>
-      <div className="message self">
-        <div className="user">Dirce, aquela!</div>
-        <div className="text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto dolores, molestiae consequuntur nulla similique et itaque saepe ab enim nemo quae modi rerum sapiente quasi voluptatum assumenda aliquid voluptatem placeat.
-        </div>
-      </div>
+      <Message self={true} date="04:20 2020/12/12" user="Dunha" text="lorem ipsum" />
+      <Message self={false} date="04:21 2020/12/12" user="Dunha" text="lorem ipsum" />
+      <Message self={false} date="04:22 2020/12/12" user="Dunha" text="lorem ipsum" />
+      <Message self={true} date="04:23 2020/12/12" user="Dunha" text="lorem ipsum" />
     </main>
     <div className="input-area">
-      <input type="text" placeholder="Digite sua mensagem" />
+      <textarea placeholder="Digite sua mensagem"></textarea>
       <button type="submit">Enviar</button>
     </div>
   </>
